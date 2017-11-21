@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="bot" />
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+    <script src="./CognitiveServices.js"></script>
+    <script src="./chat.secrets.js"></script>
+
+    <script>
+        var direct_line_secret = secrets.direct_line_secret;
+
+        var speechOptions = {
+            speechRecognizer: new CognitiveServices.SpeechRecognizer({
+                locale: 'pt-BR',
+                subscriptionKey: '113647db91f047e297edb27baeeea399'
+            }),
+
+            speechSynthesizer: new CognitiveServices.SpeechSynthesizer(
+                {
+                    subscriptionKey: '113647db91f047e297edb27baeeea399',
+                    gender: CognitiveServices.SynthesisGender.Female,
+                    //gender: CognitiveServices.SynthesisGender.Male,
+                    voiceName: 'Microsoft Server Speech Text to Speech Voice (pt-BR, HeloisaRUS)'
+                    //voiceName: 'Microsoft Server Speech Text to Speech Voice (pt-BR, Daniel, Apollo)'
+                })
+        }
+
+        BotChat.App({
+            directLine: { secret: direct_line_secret },
+            user: { id: 'userid' },
+            bot: { id: 'botid' },
+            resize: 'detect',
+            locale: 'pt-br',
+            speechOptions: speechOptions
+        }, document.getElementById("bot"));
+
+    </script>
+</body>
+</html>

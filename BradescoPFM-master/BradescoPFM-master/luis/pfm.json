@@ -1,0 +1,478 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "Bia pfm POC",
+  "desc": "POC de pfm (personal finance manager) para a bia.",
+  "culture": "pt-br",
+  "intents": [
+    {
+      "name": "Ajuda"
+    },
+    {
+      "name": "Comer"
+    },
+    {
+      "name": "Comprar"
+    },
+    {
+      "name": "Despedidas"
+    },
+    {
+      "name": "Greetings"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "1Familiar"
+    },
+    {
+      "name": "Data Personalizada"
+    },
+    {
+      "name": "Nfamiliares"
+    },
+    {
+      "name": "Produto"
+    },
+    {
+      "name": "Restaurante"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "datetime",
+    "money",
+    "number"
+  ],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "bom dia",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "oi",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "olá",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "hey",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "boa noite",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "tchau",
+      "intent": "Despedidas",
+      "entities": []
+    },
+    {
+      "text": "tudo bem?",
+      "intent": "Greetings",
+      "entities": []
+    },
+    {
+      "text": "quero comprar uma casa",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "Produto",
+          "startPos": 18,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "help",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "ajuda",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "estou perdido",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "o que você pode fazer?",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "quero ajuda",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "pode me ajudar ?",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "não sei o que fazer",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "até mais!",
+      "intent": "Despedidas",
+      "entities": []
+    },
+    {
+      "text": "quero comprar um apartamento",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "Produto",
+          "startPos": 17,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "quero comprar um celular",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "Produto",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "até logo!",
+      "intent": "Despedidas",
+      "entities": []
+    },
+    {
+      "text": "quero almoçar",
+      "intent": "Comer",
+      "entities": []
+    },
+    {
+      "text": "posso comprar uma viagem",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "Produto",
+          "startPos": 18,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "posso comprar um carro",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "Produto",
+          "startPos": 17,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "quero comprar um notebook",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "Produto",
+          "startPos": 17,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "posso comprar uma televisão",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "Produto",
+          "startPos": 18,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "posso almoçar com minhas duas irmãs no mcdonalds?",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Nfamiliares",
+          "startPos": 30,
+          "endPos": 34
+        },
+        {
+          "entity": "Restaurante",
+          "startPos": 39,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "gostaria de comer um pizza com meus filhos",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Nfamiliares",
+          "startPos": 31,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "quero jantar com minha esposa hoje",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "1Familiar",
+          "startPos": 23,
+          "endPos": 28
+        },
+        {
+          "entity": "Data Personalizada",
+          "startPos": 30,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "vou almoçar no habibs amanhã",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Restaurante",
+          "startPos": 15,
+          "endPos": 20
+        },
+        {
+          "entity": "Data Personalizada",
+          "startPos": 22,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "quero almoçar no em familia",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Restaurante",
+          "startPos": 17,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "posso jantar no fasano?",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Restaurante",
+          "startPos": 16,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "quero matar a fome no burger king",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Restaurante",
+          "startPos": 22,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "posso comer no habibs?",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Restaurante",
+          "startPos": 15,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "posso almoçar no mcdonalds?",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Restaurante",
+          "startPos": 17,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "o que da para fazer ?",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "o que você faz, bia?",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "posso ir jantar com minha familia no paris 6 hoje a noite?",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Nfamiliares",
+          "startPos": 26,
+          "endPos": 32
+        },
+        {
+          "entity": "Restaurante",
+          "startPos": 37,
+          "endPos": 43
+        },
+        {
+          "entity": "Data Personalizada",
+          "startPos": 45,
+          "endPos": 48
+        }
+      ]
+    },
+    {
+      "text": "tenho dinheiro para comer com minha filha no habibs semana que vem?",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Restaurante",
+          "startPos": 45,
+          "endPos": 50
+        },
+        {
+          "entity": "1Familiar",
+          "startPos": 36,
+          "endPos": 40
+        },
+        {
+          "entity": "Data Personalizada",
+          "startPos": 52,
+          "endPos": 65
+        }
+      ]
+    },
+    {
+      "text": "posso jantar amanhã com meu irmão no fasano?",
+      "intent": "Comer",
+      "entities": [
+        {
+          "entity": "Restaurante",
+          "startPos": 37,
+          "endPos": 42
+        },
+        {
+          "entity": "1Familiar",
+          "startPos": 28,
+          "endPos": 32
+        },
+        {
+          "entity": "Data Personalizada",
+          "startPos": 13,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "posso viajar com minhas filhas amanhã?",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "Nfamiliares",
+          "startPos": 24,
+          "endPos": 29
+        },
+        {
+          "entity": "Data Personalizada",
+          "startPos": 31,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "posso comprar um playstation semana que vem?",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "Data Personalizada",
+          "startPos": 29,
+          "endPos": 42
+        },
+        {
+          "entity": "Produto",
+          "startPos": 17,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "posso comprar uma moto com meu irmão?",
+      "intent": "Comprar",
+      "entities": [
+        {
+          "entity": "1Familiar",
+          "startPos": 31,
+          "endPos": 35
+        },
+        {
+          "entity": "Produto",
+          "startPos": 18,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "não entendo nada",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "estou confuso",
+      "intent": "Ajuda",
+      "entities": []
+    },
+    {
+      "text": "tchau, obrigado pela consulta!",
+      "intent": "Despedidas",
+      "entities": []
+    },
+    {
+      "text": "obrigado pela consulta, tchau!",
+      "intent": "Despedidas",
+      "entities": []
+    },
+    {
+      "text": "até breve, espero conversar com você novamente!",
+      "intent": "Despedidas",
+      "entities": []
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+﻿<Page
+    x:Class="TotemInteligente.Views.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TotemInteligente.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Fill="#CC1F3E"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="ÁREA RESTRITA" Grid.Column="1"
+                   FontSize="13" Grid.Row="1"
+                   Foreground="White"
+                   FontFamily="Fonts/Gilroy/Gilroy-Thin.otf#Gilroy-Thin"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center"
+                       Margin="15"
+                   VerticalAlignment="Center" Source="ms-appx:///Assets/Elementos/SETA_VOLTAR@3x.png" Tapped="Image_Tapped"/>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" Source="ms-appx:///Assets/Elementos/logo_bradesco2.png"/>
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Face API" Margin="15,70,15,30" TextAlignment="Center"
+                       FontSize="20"
+                       FontFamily="/Fonts/Gilroy/Gilroy-ExtraBold.otf#Gilroy-ExtraBold"/>
+            <Button x:Name="mic" Background="Transparent"
+                    HorizontalAlignment="Center"
+                    Margin="130,0"
+                    Click="NewFace">
+                <Image Source="ms-appx:///Assets/Elementos/CADASTRAR_FOTO@3x.png"/>
+            </Button>
+            <TextBlock Text="Speech" Margin="15,70,15,0"
+                       TextAlignment="Center" FontSize="20"
+                       FontFamily="Fonts/Gilroy/Gilroy-ExtraBold.otf#Gilroy-ExtraBold"/>
+            <ToggleSwitch Grid.Row="1" IsOn="False" Margin="15"
+                          HorizontalAlignment="Center"
+                      VerticalAlignment="Bottom" x:Name="IsSpeechOnline"
+                      Header="Ativar Speech Online" Toggled="ToggleSwitch_Toggled">
+
+            </ToggleSwitch>
+        </StackPanel>
+        <Grid Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="1" Margin="10"
+                   Source="ms-appx:///Assets/Elementos/CONFIGURACOES@3x.png"/>
+        </Grid>
+    </Grid>
+</Page>
